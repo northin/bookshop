@@ -1,0 +1,17 @@
+{
+  "name": "bookkoa",
+  "version": "1.0.0",
+  "description": "a node server as book project's controller",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "zcx",
+  "license": "ISC",
+  "dependencies": {
+    "jsonwebtoken": "^8.3.0",
+    "koa": "^2.5.2",
+    "koa-router": "^7.4.0",
+    "webpack": "^4.16.5"
+  }
+}
