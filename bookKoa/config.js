@@ -9,7 +9,7 @@ config.mysql = {
     database : 'koa2-demo'  // 选中数据库
 }
 
-config.serverUrl = "localhost:8081"
+config.serverUrl = "http://118.190.208.44:8081"
 
 
 module.exports = config
