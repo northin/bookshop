@@ -50,13 +50,13 @@ export default {
   },
   methods:{
     toUserInfo(){
-      this.$router.push('/userInfo')
+      this.$router.push('userInfo')
     },
     setAddress(){
-      this.$router.push('/setAddress')
+      this.$router.push('setAddress')
     },
     aboutShop(){
-      this.$router.push('/aboutShop')
+      this.$router.push('aboutShop')
     },
     loginOut(){
       this.$store.dispatch("loginOut").then(res => {

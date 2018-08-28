@@ -5,7 +5,7 @@ const actions = {
     return api.userLogin(loginData).then(res => {
       // console.log(res);
       if(!res.data.errorCode){
-        store.commit(types.LOGIN, res.data.data);
+        store.commit(types.LOGIN, res.data.token);
       }else{
         store.commit(types.LOGINFAIL);
       }

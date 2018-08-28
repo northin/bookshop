@@ -1,10 +1,10 @@
 import instance from './index.js'
 export default {
   bookType(data){
-    return instance.post('/book/getType',data);
+    return instance.get('/book/getType',data);
   },
   bookStyle(data){
-    return instance.post('/book/getStyle',data);
+    return instance.get('/book/getStyle',{params:data});
   },
   book(data){
     return instance.post('/book/getBook',data);

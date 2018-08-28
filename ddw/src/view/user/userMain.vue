@@ -140,13 +140,13 @@ export default {
   },
   methods:{
     toSet:function(){
-      this.$router.push('/setSys')
+      this.$router.push('setSys')
     },
     toUserInfo(){
-      this.$router.push('/userInfo')
+      this.$router.push('userInfo')
     },
     toCollection(){
-      this.$router.push('/collection')
+      this.$router.push('collection')
     },
     goOrderDetail(num){
       this.$router.push('/orderDetail/'+num)

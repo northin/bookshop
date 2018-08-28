@@ -1,20 +1,20 @@
 <template>
   <div class="footer">
     <ul class="myfooter">
-      <li :class="(isActive == 'index'? 'active':'')" @click="goto('index')">
+      <li :class="(isActive == 'index'? 'active':'')" @click="goto('/index')">
         <i class="fa fa-home" aria-hidden="true"></i>
         <div>首页</div>
       </li>
-      <li :class="(isActive == 'search'? 'active':'')" @click="goto('search')">
+      <li :class="(isActive == 'search'? 'active':'')" @click="goto('/search')">
         <i class="fa fa-bars" aria-hidden="true"></i>
         <div>分类</div>
       </li>
-      <li :class="(isActive == 'cart'? 'active':'')" @click="goto('cart')">
+      <li :class="(isActive == 'cart'? 'active':'')" @click="goto('/cart')">
         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
         <div>购物车</div>
         <badge v-if="cartNum != 0" :text="cartNum" style="    position: absolute;top: 0;"></badge>
       </li>
-      <li :class="(isActive == 'user'? 'active':'')" @click="goto('user')">
+      <li :class="(isActive == 'user'? 'active':'')" @click="goto('/user/user')">
         <i class="fa fa-user" aria-hidden="true"></i>
         <div>我的</div>
         <badge v-if="userNum != 0"  :text="userNum" style="    position: absolute;top: 0;"></badge>

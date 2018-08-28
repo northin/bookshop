@@ -32,7 +32,7 @@ const person = [
           component: AboutShop,
         },
         {
-          path: '/setAddress',
+          path: 'setAddress',
           name: 'setAddress',
           component: SetAddress,
         },{
@@ -40,19 +40,19 @@ const person = [
           name: 'collection',
           component: Collection,
         },{
-          path: '/setNiName',
+          path: 'setNiName',
           name: 'setNiName',
           component: SetNiName,
         },{
-          path: '/setEmail',
+          path: 'setEmail',
           name: 'setEmail',
           component: SetEmail,
         },{
-          path: '/setQQ',
+          path: 'setQQ',
           name: 'setQQ',
           component: SetQQ,
         },{
-          path: '/setDesc',
+          path: 'setDesc',
           name: 'setDesc',
           component: SetDesc,
         },{

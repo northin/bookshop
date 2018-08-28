@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import person from './person.js'
 import store from '@/store/index.js'
+import api from '@/api/auth.js'
 // import Index from '@/view/index'
 const Index  = resolve => require.ensure([], () => resolve(require('@/view/index')), 'Index')
 // import IndexMain from '@/view/indexMain'
@@ -94,7 +95,7 @@ const router = new Router({
 
   ]
 })
-router.beforeEach((to, from, next) => {
+router.beforeEach(async (to, from, next) => {
   let token = store.state.token;
     //判断要去的路由有没有requiresAuth  
   // console.log(to.meta.requireAuth);
@@ -102,7 +103,16 @@ router.beforeEach((to, from, next) => {
   if(to.meta.requireAuth || to.path.indexOf("user/") > -1){
     console.log(token)
     if(token != 'undefined' && token != undefined){
-      next();
+      const res = await api.isLogin()
+      if(res.data.errorCode == 0){
+        next();
+      }else{
+        next({
+          path: '/login',
+          query: {redirect: to.path}  // 将跳转的路由path作为参数，登录成功后跳转到该路由
+        });
+      }
+      
     }else{
       next({
         path: '/login',

@@ -243,5 +243,6 @@ export default {
 .add{
     position: absolute ! important;
     top: 93vh;
+    z-index: 3;
 }
 </style>

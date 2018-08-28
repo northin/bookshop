@@ -150,16 +150,16 @@ export default {
   },
   methods:{
     setNiName(){
-      this.$router.push('/setNiName')
+      this.$router.push('setNiName')
     },
     setQQ(){
-      this.$router.push('/setQQ')
+      this.$router.push('setQQ')
     },
     setEmail(){
-      this.$router.push('/setEmail')
+      this.$router.push('setEmail')
     },
     setDesc(){
-      this.$router.push('/setDesc')
+      this.$router.push('setDesc')
     },
     setIcon:function(){
       this.showIcon = true
